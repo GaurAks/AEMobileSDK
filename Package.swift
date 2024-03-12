@@ -15,7 +15,11 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "AEMobileSDK"),
+            name: "AEMobileSDK",
+            resources: [
+                    .process("OrigoSDK.xcframework")
+                  ]),
+        
         //Release binaryTarget
 //        .binaryTarget(name: "SeosMobileKeysSDK", path: "Release/SeosMobileKeysSDK.xcframework"),
 //        .binaryTarget(name: "AEWalletHIDSDK", path: "Release/OrigoSDK.xcframework"),
