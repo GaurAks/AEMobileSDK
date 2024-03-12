@@ -5,17 +5,31 @@ import PackageDescription
 
 let package = Package(
     name: "AEMobileSDK",
+    platforms: [
+        .iOS(.v17)
+        ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "AEMobileSDK",
-            targets: ["AEMobileSDK"]),
+            targets: ["AEMobileSDK","AEWalletHIDSDK","SeosMobileKeysSDK","BerTlv","CocoaLumberjack","JSONModel","Mixpanel"]),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "AEMobileSDK"),
+        //Release binaryTarget
+//        .binaryTarget(name: "SeosMobileKeysSDK", path: "Release/SeosMobileKeysSDK.xcframework"),
+//        .binaryTarget(name: "AEWalletHIDSDK", path: "Release/OrigoSDK.xcframework"),
+//        .binaryTarget(name: "BerTlv", path: "Release/Release-universal/BerTlv.xcframework"),
+//        .binaryTarget(name: "CocoaLumberjack", path: "Release/Release-universal/CocoaLumberjack.xcframework"),
+//        .binaryTarget(name: "JSONModel", path: "Release/Release-universal/JSONModel.xcframework"),
+//        .binaryTarget(name: "Mixpanel", path: "Release/Release-universal/Mixpanel.xcframework"),
+        // Debug binaryTarget
+        .binaryTarget(name: "SeosMobileKeysSDK", path: "Debug/SeosMobileKeysSDK.xcframework"),
+        .binaryTarget(name: "AEWalletHIDSDK", path: "Debug/OrigoSDK.xcframework"),
+        .binaryTarget(name: "BerTlv", path: "Debug/Debug-universal/BerTlv.xcframework"),
+        .binaryTarget(name: "CocoaLumberjack", path: "Debug/Debug-universal/CocoaLumberjack.xcframework"),
+        .binaryTarget(name: "JSONModel", path: "Debug/Debug-universal/JSONModel.xcframework"),
+        .binaryTarget(name: "Mixpanel", path: "Debug/Debug-universal/Mixpanel.xcframework"),
         .testTarget(
             name: "AEMobileSDKTests",
             dependencies: ["AEMobileSDK"]),
