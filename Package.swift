@@ -11,7 +11,7 @@ let package = Package(
     products: [
         .library(
             name: "AEMobileSDK",
-            targets: ["AEMobileSDK"]),
+            targets: ["AEMobileSDK","AEWalletHIDSDK"]),
     ],
     dependencies: [
         .package(url: "https://github.com/GaurAks/AEOrigoSDK.git", from: "1.0.0") // Replace with actual URL and version
