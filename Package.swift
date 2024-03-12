@@ -17,7 +17,7 @@ let package = Package(
         .target(
             name: "AEMobileSDK",
             resources: [
-                    .process("OrigoSDK.xcframework")
+                    .process("Debug/OrigoSDK.xcframework")
                   ]),
         
         //Release binaryTarget
