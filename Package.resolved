@@ -1,0 +1,15 @@
+{
+  "originHash" : "5d004c92695a60b203d41589b6090140d1486699019ec7d39375cd9ebbde0a8b",
+  "pins" : [
+    {
+      "identity" : "aeorigosdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/GaurAks/AEOrigoSDK.git",
+      "state" : {
+        "revision" : "1369d7c4b59fb43e8ef3486055fbd236e418c832",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}
