@@ -17,7 +17,7 @@ let package = Package(
         .target(
             name: "AEMobileSDK",
             resources: [
-                    .process("Debug/OrigoSDK.xcframework")
+                    .process("Sources/AEMobileSDK/Resources/Debug/OrigoSDK.xcframework")
                   ]),
         
         //Release binaryTarget
@@ -28,12 +28,12 @@ let package = Package(
 //        .binaryTarget(name: "JSONModel", path: "Release/Release-universal/JSONModel.xcframework"),
 //        .binaryTarget(name: "Mixpanel", path: "Release/Release-universal/Mixpanel.xcframework"),
         // Debug binaryTarget
-        .binaryTarget(name: "SeosMobileKeysSDK", path: "Debug/SeosMobileKeysSDK.xcframework"),
-        .binaryTarget(name: "AEWalletHIDSDK", path: "Debug/OrigoSDK.xcframework"),
-        .binaryTarget(name: "BerTlv", path: "Debug/Debug-universal/BerTlv.xcframework"),
-        .binaryTarget(name: "CocoaLumberjack", path: "Debug/Debug-universal/CocoaLumberjack.xcframework"),
-        .binaryTarget(name: "JSONModel", path: "Debug/Debug-universal/JSONModel.xcframework"),
-        .binaryTarget(name: "Mixpanel", path: "Debug/Debug-universal/Mixpanel.xcframework"),
+        .binaryTarget(name: "SeosMobileKeysSDK", path: "Sources/AEMobileSDK/Resources/Debug/SeosMobileKeysSDK.xcframework"),
+        .binaryTarget(name: "AEWalletHIDSDK", path: "Sources/AEMobileSDK/Resources/Debug/OrigoSDK.xcframework"),
+        .binaryTarget(name: "BerTlv", path: "Sources/AEMobileSDK/Resources/Debug/Debug-universal/BerTlv.xcframework"),
+        .binaryTarget(name: "CocoaLumberjack", path: "Sources/AEMobileSDK/Resources/Debug/Debug-universal/CocoaLumberjack.xcframework"),
+        .binaryTarget(name: "JSONModel", path: "Sources/AEMobileSDK/Resources/Debug/Debug-universal/JSONModel.xcframework"),
+        .binaryTarget(name: "Mixpanel", path: "Sources/AEMobileSDK/Resources/Debug/Debug-universal/Mixpanel.xcframework"),
         .testTarget(
             name: "AEMobileSDKTests",
             dependencies: ["AEMobileSDK"]),
